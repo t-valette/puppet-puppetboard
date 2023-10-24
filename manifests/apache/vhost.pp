@@ -51,6 +51,10 @@ class puppetboard::apache::vhost (
       package_name => 'libapache2-mod-wsgi-py3',
       mod_path     => '/usr/lib/apache2/modules/mod_wsgi.so',
     },
+    'RedHat' => {
+      package_name => 'python3-mod_wsgi',
+      mod_path     => '/usr/lib64/httpd/modules/mod_wsgi_python3.so',
+    },
     default  => {},
   }
   class { 'apache::mod::wsgi':
